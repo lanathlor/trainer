@@ -113,6 +113,14 @@
 		really advanced function. do not try this at home
 	*/
 	int 	my_bc(char *equation); // resolve some equation like 3 * (4 + 5)
+	int	my_tabsort(char **tab); // a little warm up sort to prepare for the next big boy
+	void	*my_sort(void *list, void *first_next, int (*pf)(void *first, void *second)); // sort a linked list of none specified type
+
+	void	*xml_parser_create(char *file); // open an xml file and return all the data
+	void	*xml_parser_find(void *data, char *tag, char *value); // get the first element that matche the value for the tag
+	char	**xml_parser_explode(void *elem); // explode (by copy) the elem as a char ** with [0] as the tag and [1] as the corresponding value
+	char	*xml_parser_getValue(void *elem, char *tag); // return the value of a tag in a specified elem
+	int	xml_parser_save(void *data, char *file); // save the xml data in a file. handle indent
 
 	/*
 		linked list
